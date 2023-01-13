@@ -8,6 +8,18 @@ const app = express();
 // STEP 3: create a new constant called port at set it to 3000
 const port = 3000;
 
+// STEP 6: Have the server respond when a browser is making a request to our server. 
+// app.get allows us to specify what should happen when a browser gets in touch with our
+// server and makes a get request.
+// the first parameter it takes is the location "/" refers to home root (home page)
+// the second parameter is a callback function that tells the server what to do when requests and responses happen
+// you can use res for request or req for response
+app.get("/", function(res, req) {
+    // STEP 7: Print out the request object that we get when the callback function gets triggered
+    // you can send plain text such as "Hello World!" or HTML such as "<h1>Hello World!</h1>"
+    response.send("<h1>Hello World!</h1>");
+  });
+
 // STEP 4: use the app and use one of its methods called listen. This tell is to listen to
 // a specific port for any HTTP requests that get sent to our server.
 // STEP 5: add an anonymous function to the listen method using a callback console.log to see when our port is set up in the terminal
@@ -16,4 +28,3 @@ app.listen(3000, function(){
     console.log("Server successfully started on port 3000.");
 });
 
-// STEP 6: Have the server respond when a browser is making a request to our server. 
