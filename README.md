@@ -15,4 +15,4 @@ STEP 4: Set up the express sever on the server.js document. See the document for
 
 STEP 5: Handle requests and responses by using the GET request.
 
-
+STEP 6: Install nodemon, a utility that will monitor for any changes in your source and automatically restart your server. 

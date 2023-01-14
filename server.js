@@ -14,14 +14,20 @@ const port = 3000;
 // the first parameter it takes is the location "/" refers to home route (home page)
 // the second parameter is a callback function that tells the server what to do when requests and responses happen
 // you can use res for request or req for response
-app.get("/", function(res, req) {
+app.get("/", function(req, res) {
     // STEP 7: Print out the request object that we get when the callback function gets triggered
     // you can send plain text such as "Hello World!" or HTML such as "<h1>Hello World!</h1>"
     res.send("<h1>Hello World!</h1>");
   });
 
+//STEP 8: Create a contact route
 app.get("/contact", function (req, res) {
-  res.send("Contact me at: RebReyAZ@gmail.com")
+  res.send("Contact me at: RebReyAZ@gmail.com");
+});
+
+//STEP 9: Create an about route
+app.get("/about", function(req, res){
+  res.send("My name is Rebecca and I love spicy food.");
 });
 
 // STEP 4: use the app and use one of its methods called listen. This tell is to listen to
