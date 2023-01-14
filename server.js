@@ -30,6 +30,11 @@ app.get("/about", function(req, res){
   res.send("My name is Rebecca and I love spicy food.");
 });
 
+//STEP 10: Create a hobby route
+app.get("/hobbies", function(req, res){
+  res.send("<ul><li>Minecraft</li><li>Hot Cheetos</li><li>Sailor Moon</li><li>Nail Polish</li></ul>");
+});
+
 // STEP 4: use the app and use one of its methods called listen. This tell is to listen to
 // a specific port for any HTTP requests that get sent to our server.
 // STEP 5: add an anonymous function to the listen method using a callback console.log to see when our port is set up in the terminal
